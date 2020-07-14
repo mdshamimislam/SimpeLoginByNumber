@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.MainActivity"
+    android:id="@+id/head">
+
+    <ImageView
+        android:id="@+id/fstimage"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:contentDescription="header"
+        android:scaleType="fitXY"
+        android:src="@drawable/header" />
+
+    <ImageView
+        android:id="@+id/sndimage"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/footer"
+        android:contentDescription="footer"
+        android:scaleType="fitXY" />
+
+    <TextView
+        android:id="@+id/vlogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:gravity="center"
+        android:text="Login"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="60sp"
+        android:textStyle="bold" />
+    <ScrollView
+        android:id="@+id/sv"
+        android:layout_marginTop="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/vlogin"
+        android:layout_above="@+id/sndimage"
+        android:layout_marginBottom="10dp"
+
+        >
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                >
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="50dp">
+                <EditText
+                    android:id="@+id/phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter Phone Number"
+                    android:layout_margin="10dp"
+
+                    android:padding="10dp"
+                    android:gravity="center"
+                    android:drawableLeft="@drawable/contact_phone"
+                    />
+
+
+                    <EditText
+                        android:id="@+id/password"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Enter Password"
+                        android:gravity="center"
+                        android:layout_margin="10dp"
+
+                        android:padding="10dp"
+                        android:drawableLeft="@drawable/password_ic"
+                        android:layout_below="@id/phone"
+                        android:layout_marginTop="-50dp"
+                        />
+
+                    <Button
+                        android:id="@+id/login"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/password"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="90dp"
+                        android:background="#22FF12"
+                        android:gravity="center"
+                        android:text="Login"
+                        android:textColor="#E91E63" />
+
+                </RelativeLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+
+    </ScrollView>
+
+
+</RelativeLayout>
